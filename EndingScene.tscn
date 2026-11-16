@@ -1,0 +1,445 @@
+[gd_scene format=3 uid="uid://dtbalk72fkbrs"]
+
+[ext_resource type="Texture2D" uid="uid://crkga11x3fbev" path="res://Backgrounds/OvalOffice.png" id="1_r8pcl"]
+[ext_resource type="Texture2D" uid="uid://gp83mmj71fti" path="res://Backgrounds/OvalOfficeBrokenWindow.png" id="1_vh8ki"]
+[ext_resource type="Texture2D" uid="uid://b7co5mbdb3aam" path="res://Animations/ObamaIdle.png" id="2_2xe12"]
+[ext_resource type="Texture2D" uid="uid://cmhmtjpgmeys4" path="res://Animations/ObamaKick.png" id="3_hmvpv"]
+[ext_resource type="Texture2D" uid="uid://cfasmjc0iatpw" path="res://Animations/ObamaWalking.png" id="4_w8fx8"]
+[ext_resource type="Texture2D" uid="uid://bw330vu7x2ixs" path="res://Animations/TrumpWalking.png" id="5_hmvpv"]
+[ext_resource type="Texture2D" uid="uid://uq1n5ijxuq7m" path="res://Animations/TrumpIdle.png" id="6_w8fx8"]
+[ext_resource type="Texture2D" uid="uid://djrttm8p8pa1i" path="res://Animations/TrumpKick.png" id="7_cmkhr"]
+[ext_resource type="Script" uid="uid://bqueix7pr67rm" path="res://dialogue_2.gd" id="7_w8fx8"]
+[ext_resource type="AudioStream" uid="uid://bxxmgijbntkfc" path="res://Audio/SlapOh.mp3" id="10_guq8n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpsh3"]
+atlas = ExtResource("2_2xe12")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aym7u"]
+atlas = ExtResource("2_2xe12")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh55p"]
+atlas = ExtResource("2_2xe12")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55jjj"]
+atlas = ExtResource("3_hmvpv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8vbx"]
+atlas = ExtResource("4_w8fx8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67wrn"]
+atlas = ExtResource("4_w8fx8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy1r1"]
+atlas = ExtResource("4_w8fx8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14gro"]
+atlas = ExtResource("4_w8fx8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmkhr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpsh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aym7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh55p")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55jjj")
+}],
+"loop": 1,
+"name": &"Kick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8vbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67wrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy1r1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14gro")
+}],
+"loop": 1,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8mfa"]
+atlas = ExtResource("5_hmvpv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_darti"]
+atlas = ExtResource("6_w8fx8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qm22q"]
+atlas = ExtResource("6_w8fx8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv46k"]
+atlas = ExtResource("6_w8fx8")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1tau"]
+atlas = ExtResource("7_cmkhr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmkhr"]
+atlas = ExtResource("5_hmvpv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cblvh"]
+atlas = ExtResource("5_hmvpv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh8ki"]
+atlas = ExtResource("5_hmvpv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guq8n"]
+atlas = ExtResource("5_hmvpv")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cblvh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8mfa")
+}],
+"loop": 1,
+"name": &"Fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_darti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qm22q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv46k")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1tau")
+}],
+"loop": 1,
+"name": &"Kick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmkhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cblvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vh8ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guq8n")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_vh8ki"]
+resource_name = "FadeIn"
+length = 4.4333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v1tau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mr_ Trump:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(763, 430)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mr_ Trump/AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mr_ Trump/AnimatedSprite2D:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("President_Obama:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(250, 280)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OvalOffice:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("President_Obama:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ll5wn"]
+resource_name = "TrumpKick"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mr_ Trump:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(763, 430), Vector2(174, 378)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mr_ Trump/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 4.01),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"Walk", &"Fly", &"Kick"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mr_ Trump/AnimatedSprite2D:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("President_Obama:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(250, 280), Vector2(459, 130)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OvalOffice:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4.51),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("President_Obama:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.51),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_guq8n"]
+_data = {
+&"FadeIn": SubResource("Animation_vh8ki"),
+&"RESET": SubResource("Animation_v1tau"),
+&"TrumpKick": SubResource("Animation_ll5wn")
+}
+
+[node name="EndingScene" type="Node2D" unique_id=995304168]
+
+[node name="OvalOfficeBrokenWindow" type="Sprite2D" parent="." unique_id=99827100]
+position = Vector2(452.99997, 323.37503)
+scale = Vector2(8.98, 8.516667)
+texture = ExtResource("1_vh8ki")
+
+[node name="OvalOffice" type="Sprite2D" parent="." unique_id=191914335]
+position = Vector2(449.99997, 324.5)
+scale = Vector2(9, 8.626668)
+texture = ExtResource("1_r8pcl")
+
+[node name="President_Obama" type="CharacterBody2D" parent="." unique_id=929237916]
+position = Vector2(250, 280)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="President_Obama" unique_id=354631792]
+scale = Vector2(7.4843745, 7.1718755)
+sprite_frames = SubResource("SpriteFrames_cmkhr")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=991564179]
+position = Vector2(250, 280)
+
+[node name="Mr_ Trump" type="CharacterBody2D" parent="." unique_id=606807139]
+position = Vector2(763, 430)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mr_ Trump" unique_id=992649390]
+scale = Vector2(6.242188, 6.203126)
+sprite_frames = SubResource("SpriteFrames_cblvh")
+animation = &"Walk"
+autoplay = "Idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=360792036]
+libraries/ = SubResource("AnimationLibrary_guq8n")
+autoplay = &"FadeIn"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1642204149]
+offset_left = -54.0
+offset_top = -33.0
+offset_right = 964.0
+offset_bottom = 681.0
+color = Color(0, 0, 0, 1)
+
+[node name="Dialogue2" type="Node2D" parent="." unique_id=160730511]
+position = Vector2(33, -12)
+script = ExtResource("7_w8fx8")
+dialogue_text = ["Trump: I'm back Obamna!", "Obama: ...", "Obama: How...", "Obama: I thought you were gone for good!", "Trump: Quite frankly, good riddance."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogue2" unique_id=1969112340]
+offset_left = 294.0
+offset_top = 338.0
+offset_right = 568.0
+offset_bottom = 475.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+text = "sdfgsfhsdfgsdfgsd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1440132872]
+stream = ExtResource("10_guq8n")
+volume_db = 4.622
